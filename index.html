@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+    </head>
+    <body>
+        <p>Beginning
+        </p>
+        <input id ="inputty"/>
+        <!---onchange ="inputToScreen()"/>--->
+        <button type="button" id=button2 >add</button>
+        <button type="button" id=button1>Click Me!</button>
+        <button type="button" id=button3>delete</button>
+        <div id="success">
+        <p>
+            End
+        </p>
+        </div>
+                    <script>
+            "use strict";
+//            var sentence = "He said \"My name is Matt\""; 
+//            sentence =sentence.toUpperCase();
+//            console.log(sentence);
+//            var num=2;
+//            var str2="1";
+//            str2=parseInt(str2);
+//            console.log(str2+num
+//                       );
+//            var str = ["what","where","when"]
+//            str.push("why");
+//            str.pop()
+//            for(var i=0;i<str.length;i++){
+//                console.log(str[i]);
+//            }
+            
+//            let john = {
+//                age:30
+//            };
+//            let check = function(person) {
+//                return person && (person.age>19&&person.age<41);
+//            }
+//            console.log(check(john));
+            
+            var myPar = document.createElement('p');
+            myPar.textContent="good morning";
+            document.getElementById("button1").addEventListener("click",addText);
+            function addText() {
+                document.getElementById("success").appendChild(myPar)
+            };
+            document.getElementById("button2").addEventListener("click",inputToScreen);
+            function inputToScreen(){
+                let box = document.getElementById("inputty");
+                let pee = document.createElement('p');
+                pee.id="stuff"
+                pee.textContent=box.value;
+                document.getElementById("success").appendChild(pee);
+            }
+            document.getElementById("button3").addEventListener("click",remove);
+            function remove(){
+                document.getElementById("stuff").remove();
+            }
+            
+        </script>
+        
+        
+    </body>
+</html>
