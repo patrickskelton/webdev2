@@ -1,0 +1,49 @@
+<html>
+    <head>
+         <link rel="stylesheet" href="./index.css">
+    </head>
+    <body onmousemove="myFunction(event)"  onkeydown="checkKey(event)">
+        <div >
+            <input id="box" onmouseout="myFunction2(event)"/>
+        
+            <p id="cool">
+                Type in a message to see it follow the mouse, press the UP and Down arrows to make the text larger or smaller.
+            </p>
+            <p id="mouse">
+            </p>
+        </div>
+    </body>
+    <script>
+        
+        function myFunction(e){
+            var x = e.clientX;
+            var y = e.clientY;
+            var par = document.getElementById("mouse");
+            par.style.top=y;
+            par.style.left=x;
+        }
+        function myFunction2(e){
+            console.log("function 2 activated");
+            var words=document.getElementById("box").value;
+            //console.log(words);
+            document.getElementById("mouse").innerHTML=words;
+        }
+        function checkKey(e) {
+            console.log("key pressed");
+            let el = document.getElementById("mouse");
+            let style = window.getComputedStyle(el,null).getPropertyValue("font-size");
+            let fontSize = parseFloat(style);
+            
+        if (e.keyCode == '38') {
+       // up arrow
+            console.log("up");
+           el.style.fontSize=(fontSize +1)+"px";
+        }
+        else if (e.keyCode == '40') {
+        // down arrow
+            console.log("down");
+            el.style.fontSize=(fontSize -1)+"px";
+        }
+        }
+    </script>
+</html>

@@ -4,20 +4,36 @@
     
     </head>
     <body>
-        <p>Beginning
-        </p>
+        
         <input id ="inputty"/>
         <!---onchange ="inputToScreen()"/>--->
         <button type="button" id=button2 >add</button>
         <button type="button" id=button1>Click Me!</button>
         <button type="button" id=button3>delete</button>
+        
         <div id="success">
-        <p>
-            End
-        </p>
+        
         </div>
-                    <script>
+        <ul id="details">
+                
+        </ul>
+		
+		<input id ="inputty2"/>
+		<button type="button" id=button4>Search</button>
+		<div id="result">
+		</div>
+            <script>
             "use strict";
+            let x=['a','b','c','d'];
+            x.map(cheese => {console.log(cheese);return cheese+'1';}).map(cheese => {console.log(cheese); return cheese +'2';}).forEach(cheese => console.log(cheese));
+                
+                
+                
+                
+                
+                
+                
+                
 //            var sentence = "He said \"My name is Matt\""; 
 //            sentence =sentence.toUpperCase();
 //            console.log(sentence);
@@ -41,25 +57,123 @@
 //            }
 //            console.log(check(john));
             
-            var myPar = document.createElement('p');
-            myPar.textContent="good morning";
-            document.getElementById("button1").addEventListener("click",addText);
-            function addText() {
-                document.getElementById("success").appendChild(myPar)
-            };
-            document.getElementById("button2").addEventListener("click",inputToScreen);
-            function inputToScreen(){
-                let box = document.getElementById("inputty");
-                let pee = document.createElement('p');
-                pee.id="stuff"
-                pee.textContent=box.value;
-                document.getElementById("success").appendChild(pee);
-            }
-            document.getElementById("button3").addEventListener("click",remove);
-            function remove(){
-                document.getElementById("stuff").remove();
-            }
+//            var myPar = document.createElement('p');
+//            myPar.textContent="good morning";
+//            document.getElementById("button1").addEventListener("click",addText);
+//            function addText() {
+//                document.getElementById("success").appendChild(myPar)
+//            };
+//            document.getElementById("button2").addEventListener("click",inputToScreen);
+//            function inputToScreen(){
+//                let box = document.getElementById("inputty");
+//                let pee = document.createElement('p');
+//                pee.id="stuff"
+//                pee.textContent=box.value;
+//                document.getElementById("success").appendChild(pee);
+//            }
+//            document.getElementById("button3").addEventListener("click",remove);
+//            function remove(){
+//                document.getElementById("stuff").remove();
+//            }
+//            
+//				
+//                document.getElementById("button4").addEventListener("click",make);
+//                function make(){
+//                    let box = document.getElementById("inputty2");
+//					let pee = document.createElement('p');
+//					pee.id="placeholder";
+//					
+//                    
+//					look(box.value, (nam) => {
+//						pee.textContent=nam;
+//						console.log(nam);
+//						document.getElementById("result").appendChild(pee);
+//					});
+//					
+//				}
+//                function look(input1,callback) {
+//                    let nam;
+//                    var requestURL= 'https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/kings.json'
+//                    var request = new XMLHttpRequest();
+//                    request.open('GET',requestURL);
+//                    request.responseType = 'json';
+//                    request.send();
+//                    request.onload = function(){
+//
+//                        var monarchs = request.response;
+//                        for(let HOS of monarchs){
+//                            for(let key in HOS){
+//                                if(HOS[key]==input1){
+//                                    nam=(HOS["nm"]);
+//                                    callback(nam);
+//                                }
+//                            }
+//                        }
+//                  }
+//                
+//			  }
+              
+              
+//            var requestURL = 'https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/example.json';
+//            var request = new XMLHttpRequest();
+//            request.open('GET',requestURL);
+//            request.responseType = 'json';
+//            request.send();
+//            let myheader1 = document.createElement('h1');
+//            let myheader2 = document.createElement('h2');
+//            let myheader3 = document.createElement('h3');
+//                        
+//            request.onload = function (){
+//                var superheroes = request.response;
+////                console.log(superheroes);
+//                myheader1.innerHTML=superheroes.squadName;
+//                myheader2.innerHTML=superheroes.secretBase;
+//                myheader3.innerHTML=superheroes.homeTown;
+//                document.getElementById("success").appendChild(myheader1);
+//                document.getElementById("success").appendChild(myheader2);
+//                document.getElementById("success").appendChild(myheader3);
+//                
+//                
+//                let heroes = superheroes.members;
+//                
+//                for(let hero of heroes){
+//                    let ul1=document.createElement('ul');
+//                        ul1.setAttribute("class","hero");
+//                        
+//                    
+//                    
+//                    
+//                    for (let key in hero) {
+//                        
+//                      if(key=="powers"){
+//                            let ul2=document.createElement('ul');
+//                            let powers = hero[key];
+//                            ul1.appendChild(ul2);
+//                          
+//                            for(let power of powers){
+//                                let lili=document.createElement('li');
+//                                lili.innerHTML = power;
+//                               ul2.appendChild(lili);
+//                            }
+//                    }
+//                    else{
+//                        let lili=document.createElement('li');
+//                        
+//                        lili.innerHTML = hero[key];
+//                        
+//                        ul1.appendChild(lili);
+//                            
+//                        }
+//                         
+//                    };
+//                    document.getElementById("details").appendChild(ul1);
+//                   // console.log(ul1);
+//                };
+//                
+//                
+//            };
             
+                        
         </script>
         
         
